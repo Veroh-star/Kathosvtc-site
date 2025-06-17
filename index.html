@@ -13,7 +13,6 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
     }
 
     header {
@@ -28,27 +27,50 @@
       position: absolute;
       top: 10px;
       left: 20px;
-      width: 120px;
+      width: 200px;
+      height: auto;
     }
 
     header img.rightlogo {
       position: absolute;
       top: 10px;
       right: 20px;
-      width: 60px;
+      width: 80px;
+      height: auto;
     }
 
     h1 {
-      font-size: 30px;
-      color: black;
+      font-size: 35px;
+      margin-bottom: 10px;
+     color: black;
     }
 
+    section {
+      background: blue;
+      color: black;
+      text-align: center;
+      padding: 15px;
+    }
+
+    h2 {
+      font-size: 40px;
+      color: white
+    }
+
+    h3 {
+      font-size: 16px;
+      color: lightyellow;
+      margin-top: 5px;
+    }
+   h4 {
+      font-size: 14px;
+      color: red;
+   }
     nav {
       display: flex;
       justify-content: center;
       background: #333;
-      padding: 10px;
-      flex-wrap: wrap;
+      padding: 10px 0;
     }
 
     nav a {
@@ -59,235 +81,677 @@
     }
 
     nav a:hover {
-      color: yellow;
       text-decoration: underline;
-    }
-
-    .scrolling-text-container {
-      background: #111;
-      padding: 8px 0;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-
-    .scrolling-line {
-      white-space: nowrap;
-      overflow: hidden;
-    }
-
-    .scrolling-line p {
-      display: inline-block;
-      padding-left: 100%;
-      font-weight: bold;
-      font-size: 16px;
       color: yellow;
-      animation: scroll-left 15s linear infinite;
     }
 
-    .scrolling-line:nth-child(2) p {
-      color: lightblue;
-      animation-duration: 20s;
-    }
+    @media (max-width: 600px) {
+      header img.leftlogo,
+      header img.rightlogo {
+        width: 60px;
+      }
 
-    @keyframes scroll-left {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-100%); }
-    }
+      h1 {
+        font-size: 38px;
+        color: black;
+      }
 
-    .slideshow-container {
-      width: 90%;
-      max-width: 1000px;
-      margin: 20px auto;
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
+      nav {
+        flex-direction: column;
+      }
 
-    .slide {
-      display: none;
+      nav a {
+        margin: 10px 0;
+      }
     }
-
-    .slide img {
-      width: 100%;
-    }
-
-    .caption {
-      position: absolute;
-      bottom: 10px;
-      background: rgba(0, 0, 0, 0.5);
+/*dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+ }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: blue;
+  min-width: 100px;
+  Z-index: 1;
+ }
+   .dropdown-content a {
       color: white;
-      padding: 10px;
-      text-align: center;
-      width: 100%;
-      font-size: 16px;
-    }
-
-    section {
-      padding: 30px;
-      text-align: center;
-      display: none;
-      background: white;
-    }
-
-    section h2 {
-      font-size: 24px;
-      color: darkblue;
-      margin-bottom: 15px;
-    }
-
-    section p, section li {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    ul {
-      list-style: disc;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
       text-align: left;
-      margin: 20px auto;
-      max-width: 700px;
+   }
+.dropdown-content a:hover {
+  background-color: blue;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#pdf-viewer {
+      display: none;
+      padding: 20px;
+      background-color: #f0f0f0;
+      text-align: center;
     }
+
+    iframe {
+      width: 90%;
+      height: 600px;
+      border: none;
+    }
+p {
+     
+    line-height: 1.6;
+   font-family: TimesNewroman;
+   font-size: 18px;
+  }
+ul {
+font-family: TimesNewroman;
+padding-left: 20px;
+ margin-left: 0; text-align: left;
+ style =line-height: 1.6; 
+display: inline-block;
+}
+
+.course-tab.active {
+  background-color: yellow;
+  color: black;
+}
+#mission {
+      padding: 40px;
+      background-color: #f0f0f0;
+      color: #000;
+      text-align: center;
+    }
+
+    #mission h2 {
+      color: darkblue;
+     }
+
+#vision {
+       padding: 40px;
+      background-color: #f0f0f0;
+      color: #000;
+      text-align: center;
+    }
+
+   #vision h2 {
+      color: darkblue;
+     }
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between images */
+  margin-top: 20px;
+}
+
+.image-row img {
+  width: 90%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #aaa;
+}
+#carpentry {
+       padding: 40px;
+      background-color: #f0f0f0;
+      color: #000;
+      text-align: center;
+    }
+
+   #carpentry h2 {
+      color: darkblue;
+    }
+#beauty{
+       padding: 40px;
+      background-color: #f0f0f0;
+      color: #000;
+      text-align: center;
+    }
+
+#beauty h2 {
+      color: darkblue;
+      font-family: TimesNewroman;
+    }
+
+#garment {
+       padding: 40px;
+      background-color: #f0f0f0;
+      color: #000;
+      text-align: center;
+    }
+
+   #garment h2 {
+      color: darkblue;
+      font-family: TimesNewroman;
+    }
+
+#leather {
+       padding: 40px;
+      background-color: #f0f0f0;
+      color: #000;
+      text-align: center;
+    }
+
+   #leather h2 {
+      color: darkblue;
+      font-family: TimesNewroman;
+    }
+
+#ICT {
+       padding: 40px;
+      background-color: #f0f0f0;
+      color: #000;
+      text-align: center;
+    }
+
+   #ICT h2 {
+      color: darkblue;
+      font-family: TimesNewroman;
+    }
+#MVM {
+       padding: 40px;
+      background-color: #f0f0f0;
+      color: #000;
+      text-align: center;
+    }
+
+   #MVM h2 {
+      color: darkblue;
+      font-family: TimesNewroman;
+    }
+#masonry {
+       padding: 40px;
+      background-color: #f0f0f0;
+      color: #000;
+      text-align: center;
+    }
+
+   #masonry h2 {
+      color: darkblue;
+      font-family: TimesNewroman;
+    }
+#welding {
+       padding: 40px;
+      background-color: #f0f0f0;
+      color: #000;
+      text-align: center;
+    }
+
+   #welding h2 {
+      color: darkblue;
+      font-family: TimesNewroman;
+    }
+
+#driving {
+       padding: 40px;
+      background-color: #f0f0f0;
+      color: #000;
+      text-align: center;
+    }
+
+   #driving h2 {
+      color: darkblue;
+      font-family: TimesNewroman;
+    }
+
+#news {
+       padding: 40px;
+      background-color: #f0f0f0;
+      color: #000;
+      text-align: center;
+    }
+
+   #news h2 {
+      color: darkblue;
+      font-family: TimesNewroman;
+          }
+#news ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+#news li {
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 12px;
+  line-height: 1.6;
+} 
+
+.slideshow-container {
+  width: 90%;
+  max-width: 1000px;
+  position: relative;
+  margin: 30px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto%;
+  display: block;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.2s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+.caption {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.scrolling-text {
+  width: 100%;
+  background: black;
+  color: yellow;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.scrolling-text p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
   </style>
 </head>
 <body>
 
   <header>
-    <img src="leftlogo.png" class="leftlogo" alt="Logo Left">
+    <img src="leftlogo.png" alt="Left Logo" class="leftlogo">
     <h1>DEPARTMENT OF ICT, EDUCATION AND INTERNSHIP</h1>
-    <img src="rightlogo.png" class="rightlogo" alt="Logo Right">
+    <h2>KATHONZWENI VOCATIONAL TRAINING CENTER</h2>
+    <img src="rightlogo.png" alt="Right Logo" class="rightlogo">
   </header>
+
+  <section>
+    <h3>P.O. BOX 47-90302 Kathonzweni - Makueni</h3>
+    <h4>Email: kathospoly@gmail.com</h4>
+  </section>
 
   <nav>
     <a href="#" onclick="goHome()">Home</a>
-    <a href="#" onclick="showMission()">Mission</a>
-    <a href="#" onclick="showVision()">Vision</a>
-    <a href="#" onclick="showSection('beauty')">Beauty</a>
-    <a href="#" onclick="showSection('ict')">ICT</a>
-    <a href="#" onclick="showSection('mvm')">MVM</a>
+    <div class ="dropdown">
+     <a href="#">About Us</a>
+     <div class="dropdown-content">
+       <a href="#" onclick="showMission()">MISSION</a>
+       <a href="#" onclick ="showVision()">VISSION</a>
+       
+    </div>
+   </div>
+    <div class ="dropdown">
+      <a href="#">courses offered</a>
+      <div class="dropdown-content">
+       <a href="#" class ="course-tab" data-id="beauty" onclick ="showSection(this)"">Hairdressing & Beauty Theraphy</a>
+       <a href="#" class ="course-tab" data-id="garment" onclick ="showSection(this)">Garment Making</a>
+       <a href="#" class ="course-tab" data-id="welding" onclick ="showSection(this)">Welding & Fabrication</a>
+       <a href="#" class ="course-tab" data-id="carpentry" onclick ="showSection(this)">Carpentry &Joinnery</a>
+       <a href="#" class ="course-tab" data-id="masonry" onclick ="showSection(this)">Masonry</a>
+       <a href="#" class ="course-tab" data-id="leather" onclick="showSection(this)">Leather Work</a>
+       <a href="#" class ="course-tab" data-id="MVM" onclick="showSection(this)">Motor Vehicle Mechanics</a>
+       <a href="#" class="course-tab" data-id="driving" onclick="showSection(this)">Driving</a>
+       <a href="#" class ="course-tab" data-id="ICT" onclick="showSection(this)">ICT</a>
+       
+
+     </div>
+   </div>
+      <a href="#" class ="course-tab" data-id="news" onclick="showSection(this)">News and Events</a>
+    <a href="contacts.html">Contacts</a>
   </nav>
 
-  <div class="scrolling-text-container">
-    <div class="scrolling-line">
-      <p>📢 Welcome to Kathonzweni VTC | Empowering Youths with Technical Skills | Admissions Ongoing!</p>
-    </div>
-    <div class="scrolling-line">
-      <p>🎓 Upcoming Events: Career Day | Sports Day | Graduation Ceremony — Stay Tuned!</p>
-    </div>
+<div class="scrolling-text">
+  <p>Welcome to Kathonzweni VTC | Empowering Youths with Technical Skills | Admissions Ongoing!|</p>
+  
+</div>
+<div id="main-content-area">
+<div id="slideshow-wrapper">
+ <div class="slideshow-container">
+  <div class="slide fade">
+    <img src="vollygirls.jpg" alt="volleyball girls">
+    <div class="caption">Volleyball Girls.</div>
   </div>
-
-  <div id="main-content-area">
-    <div id="slideshow-wrapper">
-      <div class="slideshow-container">
-        <div class="slide fade">
-          <img src="vollygirls.jpg" alt="volleyball girls">
-          <div class="caption">Girls' volleyball team in action!</div>
-        </div>
-        <div class="slide fade">
-          <img src="vollyboys.jpg" alt="volleyball boys">
-          <div class="caption">Boys' volleyball team during training.</div>
-        </div>
-        <div class="slide fade">
-          <img src="fbgirls.jpg" alt="football girls">
-          <div class="caption">Girls' football team preparing for matches.</div>
-        </div>
-        <div class="slide fade">
-          <img src="ftbboys.jpg" alt="football boys">
-          <div class="caption">Boys' football team – champions!</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mission Section -->
-    <section id="mission">
-      <h2>Our Mission</h2>
-      <p>To empower youths with technical skills and knowledge for sustainable quality service delivery.</p>
-    </section>
-
-    <!-- Vision Section -->
-    <section id="vision">
-      <h2>Our Vision</h2>
-      <p>A holistic institution producing competitive and self-sustaining skilled labor to the society.</p>
-    </section>
-
-    <!-- Beauty Section -->
-    <section id="beauty">
-      <h2>Hairdressing & Beauty Therapy</h2>
-      <p>Our trainees are actively gaining skills in hairdressing and beauty therapy.</p>
-      <img src="hd.jpg" alt="Beauty lesson" width="70%">
-    </section>
-
-    <!-- ICT Section -->
-    <section id="ict">
-      <h2>ICT Department</h2>
-      <p>We offer part-time computer packages and a two-year Computer Operator course examined by NITA.</p>
-      <ul>
-        <li>Photocopying</li>
-        <li>Typesetting and printing</li>
-        <li>Internet services</li>
-      </ul>
-      <img src="ict.jpg" alt="ICT Lab" width="70%">
-    </section>
-
-    <!-- MVM Section -->
-    <section id="mvm">
-      <h2>Motor Vehicle Mechanics</h2>
-      <p>Our MVM department offers training in both bike and vehicle mechanics, including:</p>
-      <ul>
-        <li>Generator servicing</li>
-        <li>Motorbike repairs</li>
-        <li>Tyre services</li>
-      </ul>
-      <img src="mvm.jpg" alt="MVM Class" width="70%">
-    </section>
+  <div class="slide fade">
+    <img src="vollyboys.jpg" alt="volleybal boys">
+    <div class="caption">Volleyball Boys.</div>
   </div>
+  <div class="slide fade">
+    <img src="fbgirls.jpg" alt="football girls">
+    <div class="caption">Football Girls.</div>
+  </div>
+  <div class="slide fade">
+    <img src="ftbboys.jpg" alt="football boys">
+    <div class="caption">Football Boys.</div>
+ </div>
+  </div>
+</div>
 
-  <script>
-    let slideIndex = 0;
-    showSlides();
 
-    function showSlides() {
-      const slides = document.getElementsByClassName("slide");
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 4000); // change every 4 sec
-    }
+<section id ="mission" style ="display:none;">
+    <h2>Our Mission</h2>
+    <p>
+      To Empower youths with Technical skills and knowledge for Sustainable Quality servive delivery.
+    </p>
+ </section>
 
-    function hideAllSections() {
-      const ids = ["mission", "vision", "beauty", "ict", "mvm"];
-      ids.forEach(id => {
-        document.getElementById(id).style.display = "none";
-      });
-      document.getElementById("slideshow-wrapper").style.display = "block";
-    }
+<section id ="vision" style ="display:none;">
+    <h2>Our vision</h2>
+    <p> 
+      All around /institution producing competitive and Self-Sustaining skilled labour to the Society
+    </p>
+</section>
 
-    function goHome() {
+<section id ="beauty" style ="display:none;">
+  <h2>Hairdressing and Beauty Therapy</h2>
+<p>Our trainees in the Hairdressing department are actively gaining skills in Hairdressing and Beauty theraphy</p>
+<br>
+<div class="image-row">
+  <div class="image-column">
+    <img src="hd3.jpg" alt="Hairdressing photo 1">
+    <p style="margin-top: 20px;"><b><i>hairdressing practical lesson</i></b></p>
+   </div> 
+     <div class="image-column">
+    <img src="hd.jpg" alt="Hairdressing photo 2">
+   <p style="margin-top: 20px;"><b><i>beauty therapy practical lesson</i></b></p>
+    </div>
+    <div class="image-column">
+    <img src="hd2.jpg" alt="Hairdressing photo 3">
+    <p style="margin-top: 20px;"><b><i>beauty therapy practical lesson</i></b></p>
+    </div>
+</div>
+</section>
+
+<section id ="carpentry" style ="display:none;">
+  <h2>Carpentry and Joinery</h2>
+
+ <p>The Carpentry class has trainees who are devoted and committed to gaining skills and making 
+Productive items.They are also doing well in operation of machine. They are aiming at a bright future. 
+</p>
+<br>
+<p style="margin-top: 20px;"><b><i>Some of the Productive   items they make include;</i></b></p> 
+
+<ul>
+   <li>Round stools</li>
+   <li>Bookshelf</li>
+   <li>Lestan</li> 
+   <li>Office tables and chairs among others </li>
+</ul>
+<br>
+
+<img src="cj.jpg" alt="carpentry class" width="700" height="500" style="margin-top: 30px;">
+</section>
+
+<section id ="garment" style ="display:none;">
+  <h2>Garment Making</h2>
+<p>Our trainees in the Garment department are actively gaining skills in Fashion design and tailoring</p>
+
+</p>
+<br>
+<img src="garment.jpg" alt="garment class" width="800" height="500" style="margin-top: 30px;">
+<p style="margin-top: 20px;"><b><i>Garment practical lesson</i></b></p>
+</section>
+
+<section id="welding" style="display:none;">
+    <h2>Welding and Fabrication</h2>
+    <p>Our trainees in the department of Welding and Fabrication are actively gaining skills in welding and metal fabrication.</p>
+    <br>
+    <img src="weld.jpg" alt="Welding class" width="700" height="500" style="margin-top: 30px;">
+    <p style="margin-top: 20px;"><b><i>Welding practical lesson</i></b></p>
+    <br>
+  </section>
+
+<section id ="masonry" style ="display:none;">
+  <h2>Masonry</h2>
+<p>The trainees in masonry department are committed and gain skills in building, stone making, Tiling and also painting
+</p>
+<br>
+<img src="masonry.jpg" alt=" masonry class" width="800" height="500" style="margin-top: 30px;">
+<p style="margin-top: 20px;"><b><i>masonry practical lesson</i></b></p> 
+</section>
+
+<section id ="MVM" style ="display:none;">
+<h2>MOTOR VEHICLE MECHANICS</h2>
+<p>Thi department deals with motor Bike and Vehicle mechanics. 
+<p style="margin-top: 20px;"><b><i>We offer various repair services such as;</i></b></p>
+<br>
+<ul>
+ <li>Generator servicing (all types)</li>
+ <li>Motorbike /motor vehicle repairs</li>
+ <li>Tyre pressure, Punture Repair/Air Inflating</li>
+ <li>Bearing Pulling (hydraulic)</li>
+</ul>
+<br>
+<img src="mvm2.jpg" alt="MVM class" width="800" height="500" style="margin-top: 30px;">
+<p style="margin-top: 20px;"><b><i> Motor Vehicle Mechanics practical lesson</i></b></p>
+</section>
+
+<section id ="ICT" style ="display:none;">
+<h2>ICT DEPARTMENT</h2>
+<p>In the department of ICT, we offer part time classes for computer packages. We also offer a two-year course known as COMPUTER OPERATOR examined by NITA.</p>
+<p style="margin-top: 20px;"><b><i> In the department we offer ICT related services such as;</i></b></p>
+<ul>
+ <li>Photocopying</li>
+ <li>Lamination</li>
+ <li>Typesetting and printing</li>
+ <li>Graphics design</li>
+ <li>KRA Returns</li>
+ <li>E-citizen online services</li>
+ <li>All Internet Services</li>
+</ul>
+<br>
+<img src="ict.jpg" alt="ICT DEPARTMENT" width="800" height="500" style="margin-top: 30px;">
+<p style="margin-top: 20px;"><b><i> ICT Club session</i></b></p>
+<br>
+<p>The institution has a well-equipped Computer Laboratory with enough computers. The computers a fully networked with a Stable Wi-Fi internet connection with a very high speed. The Wi-Fi access is free for our trainees.
+The ICT facilities in the institution has enabled our instructors to Integrate ICT in Teaching and Learning process. This has enabled our learners to familiarize themselves with the current market demands and improve their training skills with an open mind of what the current modern society wants.
+The institution has a working and innovative ICT club members whereby the members use the ICT resources to improve their ICT skills as well as improve their creativity and innovation in IT related skills.
+</p>
+</section>
+
+<section id="driving" style="display:none;">
+    <h2>Driving School</h2>
+    <p>The driving school offers class B light vehicle.</p>
+    <br>
+    <img src="driving.jpg" alt="Driving class" width="700" height="500" style="margin-top: 30px;">
+    <p style="margin-top: 20px;"><b><i>Driving class</i></b></p>
+    <br>
+  </section>
+
+
+<section id="news">
+  <h2>Upcoming events</h2>
+   <br>
+  <ul>
+    <li><b>June 20/2025: Parents Day</b></li>
+    <li><b>June 24-25/2025: Mid Term Exams</b></li>
+   
+  </ul>
+</section>
+</div>
+ <script>
+    function showICT() {
       hideAllSections();
-      document.getElementById("slideshow-wrapper").style.display = "block";
+      document.getElementById("ICT").style.display = "block";
+      document.getElementById("ICT").scrollIntoView({ behavior: "smooth" });
     }
+ </script>
 
+<script>
+  function hideAllSections() {
+    const sections = ["ICT", "carpentry", "MVM", "mission", "vision", "beauty", "masonry", "leather", "garment", "driving", "welding","news"];
+    sections.forEach(id => {
+      const section = document.getElementById(id);
+      if (section) section.style.display = "none";
+    });
+
+    document.querySelectorAll(".course-tab").forEach(tab => {
+      tab.classList.remove("active");
+    });
+   document.getElementById("slideshow-wrapper").style.display="block";
+  }
+
+  function showSection(el) {
+    hideAllSections();
+   document.getElementById("slideshow-wrapper").style.display="none";
+    const sectionId = el.getAttribute("data-id");
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.style.display = "block";
+      section.scrollIntoView({ behavior: "smooth" });
+      el.classList.add("active");
+    }
+  }
+</script>
+ <script>
     function showMission() {
       hideAllSections();
       document.getElementById("slideshow-wrapper").style.display = "none";
       document.getElementById("mission").style.display = "block";
+      document.getElementById("mission").scrollIntoView({ behavior: "smooth" });
     }
+  </script>
 
+ <script>
     function showVision() {
       hideAllSections();
       document.getElementById("slideshow-wrapper").style.display = "none";
       document.getElementById("vision").style.display = "block";
-    }
-
-    function showSection(id) {
-      hideAllSections();
-      document.getElementById("slideshow-wrapper").style.display = "none";
-      document.getElementById(id).style.display = "block";
+      document.getElementById("vision").scrollIntoView({ behavior: "smooth" });
     }
   </script>
+
+
+<script>
+    function showbeauty() {
+      hideAllSections();
+      document.getElementById("slideshow-wrapper").style.display = "none";
+      document.getElementById("beauty").style.display = "block";
+      document.getElementById("beauty").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+<script>
+    function showcarpentry() {
+      hideAllSections();
+      document.getElementById("slideshow-wrapper").style.display = "none";
+      document.getElementById("carpentry").style.display = "block";
+      document.getElementById("carpentry").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+<script>
+    function showmasonry() {
+      hideAllSections();
+      document.getElementById("slideshow-wrapper").style.display = "none";
+      document.getElementById("masonry").style.display = "block";
+      document.getElementById("masonry").scrollIntoView({ behavior: "smooth" });
+    }
+ </script>
+
+<script>
+    function showgarment() {
+      hideAllSections();
+      document.getElementById("slideshow-wrapper").style.display = "none";
+      document.getElementById("garment").style.display = "block";
+      document.getElementById("garment").scrollIntoView({ behavior: "smooth" });
+    }
+ </script>
+
+<script>
+    function showleather() {
+      hideAllSections();
+      document.getElementById("slideshow-wrapper").style.display = "none";
+      document.getElementById("leather").style.display = "block";
+      document.getElementById("leather").scrollIntoView({ behavior: "smooth" });
+    }
+ </script>
+
+<script>
+    function showwelding() {
+      hideAllSections();
+      document.getElementById("slideshow-wrapper").style.display = "none";
+      document.getElementById("welding").style.display = "block";
+      document.getElementById("welding").scrollIntoView({ behavior: "smooth" });
+    }
+ </script>
+
+
+<script>
+    function showMVM() {
+      hideAllSections();
+      document.getElementById("slideshow-wrapper").style.display = "none";
+      document.getElementById("MVM").style.display = "block";
+      document.getElementById("MVM").scrollIntoView({ behavior: "smooth" });
+    }
+ </script>
+ 
+<script>
+    function showdriving() {
+      hideAllSections();
+      document.getElementById("slideshow-wrapper").style.display = "none";
+      document.getElementById("driving").style.display = "block";
+      document.getElementById("driving").scrollIntoView({ behavior: "smooth" });
+    }
+ </script>
+
+
+<script>
+    function shownews() {
+      hideAllSections();
+      document.getElementById("slideshow-wrapper").style.display = "none";
+      document.getElementById("driving").style.display = "block";
+      document.getElementById("driving").scrollIntoView({ behavior: "smooth" });
+    }
+ </script>
+
+<script>
+  function goHome() {
+    hideAllSections();
+    document.getElementById("slideshow-wrapper").style.display = "block";
+    document.getElementById("main-content-area").scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+</script>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 4000); // Change every 4 seconds
+  }
+</script>
 </body>
 </html>
