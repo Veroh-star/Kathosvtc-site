@@ -180,6 +180,7 @@ display: inline-block;
    #vision h2 {
       color: darkblue;
      }
+
 .image-row {
   display: flex;
   justify-content: space-between;
@@ -188,8 +189,8 @@ display: inline-block;
 }
 
 .image-row img {
-  width: 90%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
   box-shadow: 0 0 5px #aaa;
 }
@@ -319,6 +320,17 @@ display: inline-block;
   line-height: 1.6;
 } 
 
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+  margin-top: 40px;
+  border-top: 2px solid #666;
+}
+
+
 .slideshow-container {
   width: 90%;
   max-width: 1000px;
@@ -402,7 +414,7 @@ display: inline-block;
      <a href="#">About Us</a>
      <div class="dropdown-content">
        <a href="#" onclick="showMission()">MISSION</a>
-       <a href="#" onclick ="showVision()">VISSION</a>
+       <a href="#" onclick ="showVision()">VISION</a>
        
     </div>
    </div>
@@ -423,7 +435,7 @@ display: inline-block;
      </div>
    </div>
       <a href="#" class ="course-tab" data-id="news" onclick="showSection(this)">News and Events</a>
-    <a href="contacts.html">Contacts</a>
+    
   </nav>
 
 <div class="scrolling-text">
@@ -433,6 +445,12 @@ display: inline-block;
 <div id="main-content-area">
 <div id="slideshow-wrapper">
  <div class="slideshow-container">
+  <div class="slide fade">
+    <img src="poster1.jpg" alt="school poster">
+    </div>
+   <div class="slide fade">
+    <img src="poster2.jpg" alt="driving poster">
+    </div>
   <div class="slide fade">
     <img src="vollygirls.jpg" alt="volleyball girls">
     <div class="caption">Volleyball Girls.</div>
@@ -465,6 +483,10 @@ display: inline-block;
     <p> 
       All around /institution producing competitive and Self-Sustaining skilled labour to the Society
     </p>
+    <br>
+    <h2> Our Motto</h2>
+    <br>
+    <p> Technology for Wealth</p>
 </section>
 
 <section id ="beauty" style ="display:none;">
@@ -503,8 +525,20 @@ Productive items.They are also doing well in operation of machine. They are aimi
    <li>Office tables and chairs among others </li>
 </ul>
 <br>
-
-<img src="cj.jpg" alt="carpentry class" width="700" height="500" style="margin-top: 30px;">
+<div class="image-row">
+  <div class="image-column">
+   <img src="cj.jpg" alt="carpentry class">
+   <p style="margin-top: 20px;"><b><i>Carpentry practical lesson</i></b></p> 
+   </div>
+   <div class="image-column">
+   <img src="cj2.jpg" alt="carpentry class">
+   <p style="margin-top: 20px;"><b><i>bookshelves,Pondium, round tables made by Carpentry class</i></b></p> 
+   </div>
+   <div class="image-column">
+   <img src="cj3.jpg" alt="carpentry class">
+   <p style="margin-top: 20px;"><b><i>Carpentry practical lesson</i></b></p> 
+   </div>
+ </div>
 </section>
 
 <section id ="garment" style ="display:none;">
@@ -513,26 +547,49 @@ Productive items.They are also doing well in operation of machine. They are aimi
 
 </p>
 <br>
-<img src="garment.jpg" alt="garment class" width="800" height="500" style="margin-top: 30px;">
-<p style="margin-top: 20px;"><b><i>Garment practical lesson</i></b></p>
+<div class="image-row">
+  <div class="image-column">
+ <img src="garment.jpg" alt="garment class">
+ <p style="margin-top: 20px;"><b><i>Garment practical lesson</i></b></p>
+ </div>
+ <div class="image-column">
+ <img src="garment2.jpg" alt="garment class">
+ <<p style="margin-top: 20px;"><b><i>practical session</i></b></p>
+ </div>
+</div>
 </section>
 
 <section id="welding" style="display:none;">
     <h2>Welding and Fabrication</h2>
     <p>Our trainees in the department of Welding and Fabrication are actively gaining skills in welding and metal fabrication.</p>
     <br>
-    <img src="weld.jpg" alt="Welding class" width="700" height="500" style="margin-top: 30px;">
+ <div class="image-row">
+  <div class="image-column">
+    <img src="weld.jpg" alt="Welding class">
     <p style="margin-top: 20px;"><b><i>Welding practical lesson</i></b></p>
-    <br>
-  </section>
+   </div>
+   <div class="image-column">
+    <img src="weld2.jpg" alt="Welding class">
+   <p style="margin-top: 20px;"><b><i>Metallic doors by made by welding trainees</i></b></p>
+  </div>
+</div>
+</section>
 
 <section id ="masonry" style ="display:none;">
   <h2>Masonry</h2>
 <p>The trainees in masonry department are committed and gain skills in building, stone making, Tiling and also painting
 </p>
 <br>
-<img src="masonry.jpg" alt=" masonry class" width="800" height="500" style="margin-top: 30px;">
-<p style="margin-top: 20px;"><b><i>masonry practical lesson</i></b></p> 
+<div class="image-row">
+  <div class="image-column">
+    <img src="masonry.jpg" alt=" masonry class">
+   <p style="margin-top: 20px;"><b><i>masonry practical lesson</i></b></p> 
+   </div>
+   <div class="image-column">
+   <img src="masonry2.jpg" alt=" masonry class">
+   <p style="margin-top: 20px;"><b><i>masonry practical lesson</i></b></p>
+  </div>
+</div>
 </section>
 
 <section id ="MVM" style ="display:none;">
@@ -547,8 +604,21 @@ Productive items.They are also doing well in operation of machine. They are aimi
  <li>Bearing Pulling (hydraulic)</li>
 </ul>
 <br>
-<img src="mvm2.jpg" alt="MVM class" width="800" height="500" style="margin-top: 30px;">
-<p style="margin-top: 20px;"><b><i> Motor Vehicle Mechanics practical lesson</i></b></p>
+<div class="image-row">
+  <div class="image-column">
+    <img src="mvm2.jpg" alt="MVM class">
+     <p style="margin-top: 20px;"><b><i> Motor Vehicle Mechanics practical lesson</i></b></p>
+   </div> 
+     <div class="image-column">
+    <img src="mvm3.jpg" alt="MVM photo 2">
+   <p style="margin-top: 20px;"><b><i>Vehicle maintenance</i></b></p>
+    </div>
+    <div class="image-column">
+    <img src="mvm4.jpg" alt="MVM photo 3">
+    <p style="margin-top: 20px;"><b><i> Tyre inflation using an air compressor</i></b></p>
+    </div>
+</div>
+
 </section>
 
 <section id ="ICT" style ="display:none;">
@@ -565,9 +635,19 @@ Productive items.They are also doing well in operation of machine. They are aimi
  <li>All Internet Services</li>
 </ul>
 <br>
-<img src="ict.jpg" alt="ICT DEPARTMENT" width="800" height="500" style="margin-top: 30px;">
-<p style="margin-top: 20px;"><b><i> ICT Club session</i></b></p>
+<div class="image-row">
+   <div class="image-column">
+   <img src="ictlab.png" alt="ICT DEPARTMENT">
+  <p style="margin-top: 20px;"><b><i> ICT Lab</i></b></p>
+  </div>
+  <div class="image-column">
+  <img src="ict.jpg" alt="ICT DEPARTMENT">
+  <p style="margin-top: 20px;"><b><i> ICT Club session</i></b></p>
+  </div>
+</div>
 <br>
+</br>
+</br>
 <p>The institution has a well-equipped Computer Laboratory with enough computers. The computers a fully networked with a Stable Wi-Fi internet connection with a very high speed. The Wi-Fi access is free for our trainees.
 The ICT facilities in the institution has enabled our instructors to Integrate ICT in Teaching and Learning process. This has enabled our learners to familiarize themselves with the current market demands and improve their training skills with an open mind of what the current modern society wants.
 The institution has a working and innovative ICT club members whereby the members use the ICT resources to improve their ICT skills as well as improve their creativity and innovation in IT related skills.
@@ -578,13 +658,39 @@ The institution has a working and innovative ICT club members whereby the member
     <h2>Driving School</h2>
     <p>The driving school offers class B light vehicle.</p>
     <br>
-    <img src="driving.jpg" alt="Driving class" width="700" height="500" style="margin-top: 30px;">
+  <div class="image-row">
+   <div class="image-column">
+    <img src="driving3.jpg" alt="Driving class">
     <p style="margin-top: 20px;"><b><i>Driving class</i></b></p>
-    <br>
+    </div>
+   <div class="image-column">
+    <img src="driving2.jpg" alt="Driving class">
+    <p style="margin-top: 20px;"><b><i>Driving School Vehicle</i></b></p>
+   </div>
+</div>
   </section>
 
+<section id ="leather" style ="display:none;">
+  <h2>Leather Work</h2>
 
-<section id="news">
+ <p>The Leather work class has trainees who are devoted and committed to gaining skills and making 
+Productive items.They are aiming at a bright future. 
+</p>
+<br>
+<p style="margin-top: 20px;"><b><i>Some of the Productive   items they make include;</i></b></p> 
+
+<ul>
+   <li>Leather Belts</li>
+   <li>Leather Shoes</li>
+   <li>Balls</li> 
+   <li>Leather bags among Others </li>
+</ul>
+<br>
+ <img src="lw.jpg" alt="Leather class" width="600" height="500" style="margin-top: 30px;">
+   <p style="margin-top: 20px;"><b><i>Leather work class</i></b></p> 
+   
+</section>
+<section id="news" style="display:none;">
   <h2>Upcoming events</h2>
    <br>
   <ul>
@@ -593,6 +699,8 @@ The institution has a working and innovative ICT club members whereby the member
    
   </ul>
 </section>
+</section>
+
 </div>
  <script>
     function showICT() {
@@ -724,8 +832,8 @@ The institution has a working and innovative ICT club members whereby the member
     function shownews() {
       hideAllSections();
       document.getElementById("slideshow-wrapper").style.display = "none";
-      document.getElementById("driving").style.display = "block";
-      document.getElementById("driving").scrollIntoView({ behavior: "smooth" });
+      document.getElementById("news").style.display = "block";
+      document.getElementById("news").scrollIntoView({ behavior: "smooth" });
     }
  </script>
 
@@ -753,5 +861,9 @@ The institution has a working and innovative ICT club members whereby the member
     setTimeout(showSlides, 4000); // Change every 4 seconds
   }
 </script>
+
+<footer>
+  <p>&copy; 2025 ICT Club Kathonzweni VTC. All rights reserved.</p>
+</footer>
 </body>
 </html>
